@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #dbeeff,
+            #eef7ff
+        );
+}
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding-top: 70px;
+}
+
+.logo {
+    width: 500px;
+    max-width: 85%;
+
+    height: auto;
+}
+
+.register-button {
+
+    background: white;
+
+    color: #234f48;
+
+    text-decoration: none;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    padding: 20px 42px;
+
+    border-radius: 24px;
+
+    transition: 0.2s;
+}
+
+.register-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    .logo {
+        width: 330px;
+    }
+
+    .register-button {
+        margin-top: 45px;
+
+        font-size: 21px;
+
+        padding:
+            18px
+            30px;
+    }
+}
+
+.form-page {
+    min-height: 100vh;
+
+    padding: 50px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-logo {
+    width: 350px;
+    max-width: 80%;
+
+    margin-bottom: 35px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 650px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.08);
+}
+
+.form-container h1 {
+    color: #234f48;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    color: #234f48;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 22px;
+
+    border: 2px solid #d6e7e3;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+
+    border-color: #6d9d45;
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.checkbox-row input {
+    width: auto;
+
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.checkbox-row label {
+    font-weight: normal;
+}
+
+.submit-button {
+    margin-top: 15px;
+
+    padding: 18px;
+
+    background: #234f48;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 18px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    opacity: 0.9;
+}
+
+.admin-page {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+.admin-logo {
+    width: 500px;
+    max-width: 90%;
+    height: auto;
+
+    margin-bottom: 30px;
+}
+
+.admin-card {
+    width: 100%;
+    max-width: 450px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.10);
+}
+
+.admin-card h1 {
+    text-align: center;
+
+    color: #234f48;
+
+    margin-bottom: 30px;
+}
+
+.admin-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-card input {
+    padding: 14px;
+
+    margin-bottom: 20px;
+
+    border: 2px solid #d6e7e3;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+.admin-login-button {
+    padding: 16px;
+
+    background: #234f48;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 14px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.admin-message {
+    margin-top: 18px;
+
+    text-align: center;
+}
+
+.registration-card {
+    background: #f7fbff;
+
+    padding: 18px;
+
+    margin-top: 15px;
+
+    border-radius: 15px;
+
+    color: #234f48;
+}
+
+.registration-card p {
+    margin: 6px 0;
+}

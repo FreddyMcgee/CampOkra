@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Camp Okra Admin</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <main class="admin-page">
+
+        <img
+            src="Logo/Camp_Okra (1).png"
+            alt="Camp Okra Logo"
+            class="admin-logo"
+        >
+
+        <div class="admin-card">
+
+            <h1 id="adminLoginTitle">
+                Admin Login
+            </h1>
+
+            <form id="adminLoginForm">
+
+                <label for="adminEmail">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="adminEmail"
+                    required
+                >
+
+                <label for="adminPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="adminPassword"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="admin-login-button"
+                >
+                    LOGIN
+                </button>
+
+            </form>
+
+            <p
+                id="adminMessage"
+                class="admin-message"
+            ></p>
+
+
+            <div
+                id="dashboard"
+                style="display: none;"
+            >
+
+                <h2>
+                    Camp Okra Registrations
+                </h2>
+
+                <p>
+                    Total Registrations:
+                    <strong id="totalRegistrations">
+                        0
+                    </strong>
+                </p>
+
+                <button
+                    id="downloadCsvButton"
+                    class="admin-login-button"
+                    type="button"
+                >
+                    DOWNLOAD CSV
+                </button>
+
+                <div
+                    id="registrationList"
+                    style="margin-top: 25px;"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Camp Okra Registration</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <main class="form-page">
+
+        <img
+            src="Logo/Camp_Okra (1).png"
+            alt="Camp Okra Logo"
+            class="form-logo"
+        >
+
+        <div class="form-container">
+
+            <h1>Camp Registration</h1>
+
+            <form id="registrationForm">
+
+                <label for="parentName">
+                    Parent / Guardian Name
+                </label>
+
+                <input
+                    type="text"
+                    id="parentName"
+                    name="parentName"
+                    required
+                >
+
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
+
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                >
+
+
+                <label for="camperFirstName">
+                    Camper First Name
+                </label>
+
+                <input
+                    type="text"
+                    id="camperFirstName"
+                    name="camperFirstName"
+                    required
+                >
+
+
+                <label for="camperLastName">
+                    Camper Last Name
+                </label>
+
+                <input
+                    type="text"
+                    id="camperLastName"
+                    name="camperLastName"
+                    required
+                >
+
+
+                <label for="camperAge">
+                    Camper Age
+                </label>
+
+                <input
+                    type="number"
+                    id="camperAge"
+                    name="camperAge"
+                    min="1"
+                    max="17"
+                    required
+                >
+
+
+                <label for="emergencyContact">
+                    Emergency Contact Name
+                </label>
+
+                <input
+                    type="text"
+                    id="emergencyContact"
+                    name="emergencyContact"
+                    required
+                >
+
+
+                <label for="emergencyPhone">
+                    Emergency Contact Phone
+                </label>
+
+                <input
+                    type="tel"
+                    id="emergencyPhone"
+                    name="emergencyPhone"
+                    required
+                >
+
+
+                <label for="allergies">
+                    Allergies / Medical Notes
+                </label>
+
+                <textarea
+                    id="allergies"
+                    name="allergies"
+                    rows="4"
+                ></textarea>
+
+
+                <div class="checkbox-row">
+
+                    <input
+                        type="checkbox"
+                        id="photoRelease"
+                        name="photoRelease"
+                    >
+
+                    <label for="photoRelease">
+                        I give permission for photos/video of my child.
+                    </label>
+
+                </div>
+
+
+                <div class="checkbox-row">
+
+                    <input
+                        type="checkbox"
+                        id="waiver"
+                        name="waiver"
+                        required
+                    >
+
+                    <label for="waiver">
+                        I agree to the Camp Okra participation waiver.
+                    </label>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
+                    SUBMIT REGISTRATION
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
