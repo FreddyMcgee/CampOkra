@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+.hero-section {
+    background-image: url('images/forest.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
 body {
     min-height: 100vh;
 
