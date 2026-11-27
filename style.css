@@ -5,10 +5,108 @@
 }
 
 .hero-section {
-    background-image: url('C:\\Users\\Owner\\Downloads\\fall26\\forest (1).jpg');
+    background-image: url('images/forest.jpg');
     background-size: cover;
     background-position: center;
 
+}
+
+.appointment-card {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.create_appointment_button {
+    
+    background: #234f48;;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    padding: 20px 42px;
+
+    border-radius: 24px;
+
+    transition: 0.2s;
+}
+
+
+.Schedule_appointment {
+     width: 100%;
+    max-width: 450px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.10);
+}
+
+.Schedule_card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Schedule_header {
+    text-align: center;
+
+    color: #234f48;
+
+    margin-bottom: 30px;
+}
+
+.Schedule_appointment h1 {
+    text-align: center;
+
+    color: #234f48;
+
+    margin-bottom: 30px;
+}
+
+.addAppointment_button {
+
+    background: #234f48;;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    padding: 20px 42px;
+
+    border-radius: 24px;
+
+    transition: 0.2s;
+}
+
+form appointment {
+    display: flex;
+    flex-direction: column;
+}
+
+form select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 22px;
+    border: 2px solid #d6e7e3;
+    border-radius: 12px;
+    font-size: 16px;
 }
 
 body {
