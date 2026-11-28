@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,108 +12,261 @@
 
     <title>Camp Okra Admin</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-     <div class="hero-section">
-        
-    <main class="admin-page">
+    <div class="hero-section">
 
-        <img
-            src="Logo/Camp_Okra (1).png"
-            alt="Camp Okra Logo"
-            class="admin-logo"
-        
-        >
+        <main class="admin-page">
 
-        <div class="admin-card">
-
-            <h1 id="adminLoginTitle">
-                Admin Login
-            </h1>
-
-            <form id="adminLoginForm">
-
-                <label for="adminEmail">
-                    Email
-                </label>
-
-                <input
-                    type="email"
-                    id="adminEmail"
-                    required
-                >
-
-                <label for="adminPassword">
-                    Password
-                </label>
-
-                <input
-                    type="password"
-                    id="adminPassword"
-                    required
-                >
-
-                <button
-                    type="submit"
-                    class="admin-login-button"
-                >
-                    LOGIN
-                </button>
-
-            </form>
-
-            <p
-                id="adminMessage"
-                class="admin-message"
-            ></p>
-
-
-            <div
-                id="dashboard"
-                style="display: none;"
+            <img
+                src="Logo/Camp_Okra (1).png"
+                alt="Camp Okra Logo"
+                class="admin-logo"
             >
 
-                <h2>
-                    Camp Okra Registrations
-                </h2>
+            <div class="admin-card">
 
-                <p>
-                    Total Registrations:
-                    <strong id="totalRegistrations">
-                        0
-                    </strong>
-                </p>
+                <h1 id="adminLoginTitle">
+                    Admin Login
+                </h1>
 
-                <button
-                    id="downloadCsvButton"
-                    class="admin-login-button"
-                    type="button"
-                >
-                    DOWNLOAD CSV
-                </button>
+                <!-- Admin Login Form -->
 
-                <div
-                    id="registrationList"
-                    style="margin-top: 25px;"
-                ></div>
+                <form id="adminLoginForm">
+
+                    <label for="adminEmail">Email</label>
+
+                    <input
+                        type="email"
+                        id="adminEmail"
+                        required
+                    >
+
+                    <label for="adminPassword">Password</label>
+
+                    <input
+                        type="password"
+                        id="adminPassword"
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        class="admin-login-button"
+                    >
+                        LOGIN
+                    </button>
+
+                </form>
+
+                <p
+                    id="adminMessage"
+                    class="admin-message"
+                ></p>
+
+                <!-- Admin Dashboard -->
+
+                <div id="dashboard" style="display: none;">
+
+                    <div class="dashboard-header">
+
+                        <h2>Camp Okra Registrations</h2>
+
+                        <button
+                            type="button"
+                            id="logoutButton"
+                            class="logout-button"
+                        >
+                            LOGOUT
+                        </button>
+
+                    </div>
+
+                    <!-- Dashboard Statistics -->
+
+                    <div class="dashboard-stats">
+
+                        <div class="stat-card">
+                            <p>Total Campers</p>
+                            <h2 id="totalRegistrations">0</h2>
+                        </div>
+
+                        <div class="stat-card">
+                            <p>Search Campers</p>
+                            <h2 id="searchResults">0</h2>
+                        </div>
+
+                    </div>
+
+                    <!-- Search and Filter Controls -->
+
+                    <div class="dashboard-controls">
+
+                        <input
+                            type="search"
+                            id="searchInput"
+                            placeholder="Search by camper, parents, emails..."
+                        >
+
+                        <select id="ageFilter">
+                            <option value="all">All Ages</option>
+                        </select>
+
+                        <button
+                            id="downloadCsvButton"
+                            class="admin-login-button"
+                            type="button"
+                        >
+                            Download CSV
+                        </button>
+
+                    </div>
+
+                    <!-- Individual Camper Cards -->
+
+                    <div
+                        id="registrationList"
+                        class="registration-grid"
+                    ></div>
+
+                </div>
+
+                <!-- Edit Registration Form -->
+
+                <dialog id="editDialog" class="edit-dialog">
+
+                    <h2>Edit Registration</h2>
+
+                    <form id="editRegistrationForm">
+
+                        <input
+                            type="hidden"
+                            id="editCamperId"
+                        >
+
+                        <label for="editFirstName">
+                            Camper First Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editFirstName"
+                            required
+                        >
+
+                        <label for="editLastName">
+                            Camper Last Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editLastName"
+                            required
+                        >
+
+                        <label for="editAge">
+                            Camper Age
+                        </label>
+
+                        <input
+                            type="number"
+                            id="editAge"
+                            min="1"
+                            max="17"
+                            required
+                        >
+
+                        <label for="editParentName">
+                            Parent / Guardian Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editParentName"
+                            required
+                        >
+
+                        <label for="editEmail">
+                            Parent Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="editEmail"
+                            required
+                        >
+
+                        <label for="editPhone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="editPhone"
+                            required
+                        >
+
+                        <label for="editEmergencyContact">
+                            Emergency Contact
+                        </label>
+
+                        <input
+                            type="text"
+                            id="editEmergencyContact"
+                            required
+                        >
+
+                        <label for="editEmergencyPhone">
+                            Emergency Phone
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="editEmergencyPhone"
+                            required
+                        >
+
+                        <label for="editAllergies">
+                            Allergies / Medical Information
+                        </label>
+
+                        <textarea
+                            id="editAllergies"
+                            rows="4"
+                        ></textarea>
+
+                        <div class="edit-actions">
+
+                            <button
+                                type="button"
+                                id="cancelEditButton"
+                                class="cancel-button"
+                            >
+                                Cancel
+                            </button>
+
+                            <button
+                                type="submit"
+                                id="saveEditButton"
+                                class="save-button"
+                            >
+                                Save Changes
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </dialog>
 
             </div>
 
-        </div>
+        </main>
 
-        
-    </main>
-    
-</div>
-    <script
-        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
-    ></script>
+    </div>
 
     <script src="admin.js"></script>
 
